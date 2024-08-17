@@ -3,7 +3,7 @@
 int main(void){
 
   //init var
-  int numbers[] = {20, 3232, 22, 1, 30, 2};
+  int numbers[] = {20, 3232, 22, 1, 30, 2, 20, 10, 100, 90};
 
   // get length
   int length = sizeof(numbers) / sizeof(numbers[0]);
