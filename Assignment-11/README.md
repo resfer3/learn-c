@@ -6,3 +6,5 @@ You can initialize your array size as 10 and let's use a max test score count of
 Print the average of the test scores to the second decimal place.
 
 Hint: Look up while and for loops. Look up the strcmp() function.
+
+Assigment [here](https://github.com/h0mbre/Learning-C/tree/master/Assignment-11)
