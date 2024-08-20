@@ -2,11 +2,6 @@
 
 int main(void){
 
-//  int player_1[4];
-//  int player_2[4];
-//  int player_3[4];
-//  int player_4[4];
-//  int player_5[4];
   // init var
   int basketball[4][5];
 
@@ -48,13 +43,12 @@ int main(void){
    // printf("%f \n", players_best_avg[b]);
   }
 
-  // get highest //TODO: fix bug, highest result is wrong
-  float highest;
-  int index;
+  // get highest 
+  float highest = players_best_avg[0];
+  int index = 1;
   for (int h = 0; h < 5; h++){
-    printf("%f\n", players_best_avg[h+1]);
-    }
-    if (players_best_avg[h] >= players_best_avg[h+1]){
+    printf("%f\n", players_best_avg[h]);
+    if (highest < players_best_avg[h]){
       highest = players_best_avg[h];
       index = h+1;
     }  
