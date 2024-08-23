@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void a(int* var_ref);
 int main(void){
 
   // init var
@@ -21,6 +22,9 @@ int main(void){
   printf("The value of the pointer to the int variable is: %d\n", *second_ptr);
   printf("The memory address of the pointer second_ptr: %p\n", &second_ptr);
 
+  a(&variable);
+  printf("calling function, passing by reference and modifying master variable\n");
+
   // second_ptr_address pointing to second_ptr
   int *second_ptr_address = second_ptr;
   printf("second_ptr_address pointing to second_ptr\n");
@@ -29,5 +33,11 @@ int main(void){
   printf("The memory address of the second_ptr_address is: %p\n", &second_ptr_address);
 
   return 0;
+
+}
+
+void a(int* var_ref){
+  
+  *var_ref += 1;
 
 }
