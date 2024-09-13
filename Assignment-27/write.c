@@ -9,10 +9,12 @@ int main(void){
   ssize_t bytes_written;
   int fd;
 
-  strcpy(buf, "Hello World!\n");
+  strcpy(buf, "Hello, World!\n");
   nbytes = strlen(buf);
 
   bytes_written = write(fd, buf, nbytes);
+
+  printf("I broke it!!! :)\n");
 
   return bytes_written;
 }
