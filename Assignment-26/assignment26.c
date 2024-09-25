@@ -7,8 +7,7 @@
 int main(void){
 
   // socket()
-  // 6 = TCP protocol
-  int sockfd = socket(AF_INET, SOCK_STREAM, 6);
+  int sockfd = socket(AF_INET, SOCK_STREAM, 0);
   // will return -1 if error occurs 
   if (sockfd < 0){
     printf("Socket descriptor failed...\n");
